@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 
 const getblog= async()=>{
- const res =  await fetch('/api/posts',{
+ const res =  await fetch(`${process.env.BASE_URL}/api/posts`,{
     cache:"no-store",
   })
 

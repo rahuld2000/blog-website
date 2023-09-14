@@ -75,7 +75,7 @@ const router= useRouter();
   let handlesubmit= async(e)=>{
     e.preventDefault();
     try {
-    const res=  await fetch("/api/posts",{
+    const res=  await fetch("http://localhost:3000/api/posts",{
         method:"POST",
         body: JSON.stringify({
           title,description,username:session.data.user.name,image:media
