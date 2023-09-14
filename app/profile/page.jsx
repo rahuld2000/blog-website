@@ -1,19 +1,14 @@
-import Link from 'next/link'
+import { getServerSession } from 'next-auth'
 import React from 'react'
+import { authOptions } from '../api/auth/[...nextauth]/route'
+import { redirect } from 'next/navigation';
+import Register from '@/components/register/Register';
 
-const Profile = () => {
-  return (
-    <div className='w-full min-h-screen bg-green-200'>
-    <div>
-    <form action="">
-      <input type="text" placeholder='email' />
-      <input type="text" placeholder='password' />
-      <button>login</button>
-      </form>
-    </div>
-    <Link href="profile/signup">Create a new account</Link>
-    </div>
-  )
+
+export default async function Profile() {
+  
+  const session =await getServerSession(authOptions);
+  if(session) redirect("/profile/info")
+  
+  return <Register/>
 }
-
-export default Profile
