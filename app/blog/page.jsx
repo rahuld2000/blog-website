@@ -24,7 +24,7 @@ const data = await getblog();
    <div className='p-8 w-full min-h-screen' >
   {
     data.map((item)=>(
-      <Link  href={`/blog/${item._id}`}>
+      <Link key={item._id}  href={`/blog/${item._id}`}>
       <div  className='m-4  p-4 flex gap-24 ' >
       <Image src={item.image} width={380} height={320}  alt="Picture of the author"/>
       <div className='w-[700px] overflow-hidden p-2'>
