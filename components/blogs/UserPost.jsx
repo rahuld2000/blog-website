@@ -13,7 +13,7 @@ export default function UserPost() {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`$http://localhost:3000/api/posts/${id}`, {
+      await fetch(`http://localhost:3000/api/posts/${id}`, {
         method: "DELETE",
       });
       mutate();

@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 
 const getblog= async(id)=>{
- const res =  await fetch(`${process.env.BASE_URL}/api/posts/${id}`,{
+ const res =  await fetch(`http://localhost:3000/api/posts/${id}`,{
     cache:"no-store",
   })
 
@@ -23,8 +23,7 @@ const data = await getblog(params.id);
  
       <div  className='m-4 p-4 ' >
       <p className='text-4xl font-medium'>{data.title}</p>
-     <img src={data.image} className='w-full object-cover h-[450px] mb-4' alt="error" />
-      
+      <Image src={data.image} alt="error" width={450} height={450} className="object-cover mb-4" />
       <p className='p-2' >{data.description}</p>
     
       
