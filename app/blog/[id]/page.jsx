@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 
 const getblog= async(id)=>{
- const res =  await fetch(`http://localhost:3000/api/posts/${id}`,{
+ const res =  await fetch(`https://blog-website-lovat-six.vercel.app/api/posts/${id}`,{
     cache:"no-store",
   })
 

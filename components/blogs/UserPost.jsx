@@ -9,11 +9,11 @@ export default function UserPost() {
     const session =useSession();
   const router = useRouter();
   const fetcher = (...args) => fetch(...args).then(res => res.json())
-  const { data, mutate , error, isLoading } = useSWR(`http://localhost:3000/api/posts?username=${session?.data?.user.name}`, fetcher)
+  const { data, mutate , error, isLoading } = useSWR(`https://blog-website-lovat-six.vercel.app/api/posts?username=${session?.data?.user.name}`, fetcher)
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`http://localhost:3000/api/posts/${id}`, {
+      await fetch(`https://blog-website-lovat-six.vercel.app/api/posts/${id}`, {
         method: "DELETE",
       });
       mutate();

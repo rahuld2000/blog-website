@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 
 const getblog= async()=>{
- const res =  await fetch(`http://localhost:3000/api/posts`,{
+ const res =  await fetch(`https://blog-website-lovat-six.vercel.app/api/posts`,{
     cache:"no-store",
   })
 
