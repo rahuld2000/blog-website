@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 
 const getblog= async(id)=>{
- const res =  await fetch(`https://blog-website-lovat-six.vercel.app/api/posts/${id}`,{
+ const res =  await fetch(`https://blog-website-lovat-six.vercel.app/${id}`,{
     cache:"no-store",
   })
 
@@ -19,11 +19,11 @@ const data = await getblog(params.id);
 
 
   return (
-   <div className='min-h-screen '>
+   <div className='min-h-screen  '>
  
       <div  className='m-4 p-4 ' >
       <p className='text-4xl font-medium'>{data.title}</p>
-      <Image src={data.image} alt="error" width={450} height={450} className="object-cover mb-4" />
+      <Image  src={data.image} alt="error" width={1440} height={720} className="object-cover w-full h-[400px] mb-4" />
       <p className='p-2' >{data.description}</p>
     
       

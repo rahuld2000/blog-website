@@ -26,10 +26,10 @@ const data = await getblog();
     data.map((item)=>(
       <Link key={item._id}  href={`/blog/${item._id}`}>
       <div  className='m-4  p-4 flex gap-24 ' >
-      <Image src={item.image} width={380} height={320}  alt="Picture of the author"/>
-      <div className='w-[700px] overflow-hidden p-2'>
-      <p className='text-xl font-semibold'>{item.title}</p>
-      <p className='text-gray-700'>{item.description}</p>
+      <Image className='rounded-lg' src={item.image} width={340} height={300}  alt="Picture of the author"/>
+      <div className='w-[800px] overflow-hidden p-1'>
+      <p className='text-3xl font-semibold'>{item.title}</p>
+      <p className='text-gray-700 h-48 p-1'>{item.description}</p>
       </div>
      
        </div>

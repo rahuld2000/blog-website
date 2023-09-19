@@ -47,24 +47,24 @@ try {
 
 
   return (
-    <div className='w-full min-h-screen '>
+    <div className="w-full h-[85vh]  flex flex-col justify-center gap-3 items-center">
     <div>
-    <form onSubmit={handlesubmit}>
-    <input type="text"  onChange={(e)=>{setName(e.target.value)}} placeholder='Name' />
-    <input type="text" onChange={(e)=>{setEmail(e.target.value)}} placeholder='email'/>
-     <input type="text" onChange={(e)=>{setPassword(e.target.value)}} placeholder='password' />
-     <button>signup</button>
+    <form className="flex flex-col gap-8" onSubmit={handlesubmit}>
+    <input   className="p-4 w-96 rounded-md"  type="text"  onChange={(e)=>{setName(e.target.value)}} placeholder='Name' />
+    <input  className="p-4 w-96 rounded-md"  type="text" onChange={(e)=>{setEmail(e.target.value)}} placeholder='email'/>
+     <input   className="p-4 w-96 rounded-md" type="password" onChange={(e)=>{setPassword(e.target.value)}} placeholder='password' />
+     <button className="mx-3 p-4 bg-black text-white rounded-md hover:bg-zinc-800">signup</button>
      </form>
      <div>
         {
             error && (
-                <div>{error}</div>
+                <div className="w-44 text-sm p-1 text-white rounded-sm text-center bg-red-600">{error}</div>
             )
         }
        
      </div>
     </div>
-     <Link href="/profile">already have a account</Link>
+     <Link className="underline" href="/profile">already have a account</Link>
     </div>
   )
 }

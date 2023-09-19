@@ -89,13 +89,13 @@ const router= useRouter();
     }
   }
   return (
-    <div className='flex  items-center justify-center w-full min-h-screen'>
-    <div className=' flex-row'>
-    <form>
-    <input type='file' onChange={(e)=>setfile((e).target.files[0])} />
-    <input type="text" onChange={(e)=>settitle((e).target.value)} placeholder='title'/>
-     <input type="text" onChange={(e)=>setdescription((e).target.value)} placeholder='text' />
-     <button onClick={handlesubmit}>submit</button>
+    <div className='flex  items-center justify-center w-full h-[85vh]'>
+    <div >
+    <form className="flex flex-col gap-8">
+    <input  type='file' onChange={(e)=>setfile((e).target.files[0])} />
+    <input className="p-4  rounded-md" type="text" onChange={(e)=>settitle((e).target.value)} placeholder='title'/>
+     <input className="p-4 w-[800px] rounded-md h-72" type="text" onChange={(e)=>setdescription((e).target.value)} placeholder='Description' />
+     <button className="mx-3 p-4 w-56 bg-black text-white rounded-md hover:bg-zinc-800" onClick={handlesubmit}>submit</button>
      </form>
     </div>
     

@@ -1,18 +1,17 @@
 "use client"
 import { signOut, useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation';
 
 import React from 'react'
 
 function Profile() {
-  const router =useRouter();
+ 
   const {data:session} = useSession();
   return (
-    <div>
-    <h2>info</h2>
-    <p>{session?.user?.name}</p>
+    <div className='w-full h-[85vh] flex justify-center items-center flex-col gap-10'>
+   
+    <p className='text-2xl font-bold'>{session?.user?.name}</p>
     <p>{session?.user?.email}</p>
-    <button onClick={()=>{
+    <button className=" w-52 p-4 bg-[#D80032] text-white rounded-md hover:bg-[#a10026]"  onClick={()=>{
    signOut();
     }}>signout</button>
     </div>
