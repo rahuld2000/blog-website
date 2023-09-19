@@ -16,7 +16,7 @@ export default function Home()
     <p className={`${satisfy.variable} font-sans text-5xl`}>Write Your Blogs and Thoughts here everyday.</p>
   </div>
   <div>
-    <Image className="w-96" src={homeimg}/>
+    <Image className="w-96" src={homeimg} alt="home eror"/>
   </div>
  
 </div>
