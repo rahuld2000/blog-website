@@ -1,4 +1,4 @@
-# Assignment: Infinite Scrolling in React
+# Blog Website
 
 it is a blog-website where multiple user can upload their thoughts or blogs with images.
 -Used NEXTJS for creating api and do all CRUD operation in Mongodb. user can perform sign/signup all
